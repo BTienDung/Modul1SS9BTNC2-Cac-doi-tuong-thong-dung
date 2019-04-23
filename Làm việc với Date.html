@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function myDate(gioSinh, namSinh) {
+        this.gioSinh = gioSinh;
+        this.namSinh = namSinh;
+
+        this.getNamSinh = function () {
+            return this.namSinh;
+        };
+        this.setNamSinh = function (year) {
+            this.namSinh = year;
+        }
+    }
+
+    let dateHT = new Date();
+    namHT = dateHT.getFullYear();
+
+    let my = new myDate(10, 1999);
+    let year = my.getNamSinh();
+    let tinhTuoi = namHT - year;
+    console.log('Ban da song duoc: '+tinhTuoi+" nam");
+    let month = tinhTuoi*12;
+    console.log('Ban da song duoc: '+month+" thang");
+    let day = month*30;
+    console.log('Ban da song duoc: '+day+" ngay");
+    let hours = day *24;
+    console.log('Ban da song duoc: '+hours+" gio");
+    let minutes = hours*60;
+    console.log('Ban da song duoc: '+minutes+" phut");
+    let second = minutes*60;
+    console.log('Ban da song duoc: '+second+" giay");
+</script>
+</body>
+</html>
